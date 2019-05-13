@@ -1,10 +1,10 @@
 package main
 
 import (
-	"VeeProxyEngine/socks5"
 	"bufio"
 	"fmt"
 	"github.com/BurntSushi/toml"
+	"github.com/VeeSecurity/SOCKS5Engine/socks5"
 	"github.com/go-redis/redis"
 	"io/ioutil"
 	"layeh.com/radius"
