@@ -1,9 +1,9 @@
 package main
 
 import (
-	"VeeProxyEngine/socks5"
 	"flag"
 	"fmt"
+	"github.com/VeeSecurity/SOCKS5Engine/socks5"
 	"io/ioutil"
 	"log"
 	"net"
