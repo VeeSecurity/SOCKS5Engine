@@ -32,11 +32,11 @@ func listenForSIGUSR1(srv *socks5.Server) {
 
 func main() {
 
-	const confMessage = "Full path to config. Refer to default VeeProxyEngine.conf for an example."
+	const confMessage = "Full path to config. Refer to default config.conf for an example."
 
 	v := flag.Bool("v", false, "version")
 	h := flag.Bool("h", false, "help")
-	pathToConfig := flag.String("conf", "/etc/VeeProxyEngine.conf", confMessage)
+	pathToConfig := flag.String("conf", "/etc/vee-socks5/config.conf", confMessage)
 	flag.Parse()
 
 	if *v {

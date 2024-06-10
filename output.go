@@ -1,9 +1,9 @@
 package main
 
-const version = `Vee Proxy Engine 1.0.0.`
+const version = `Vee Security — SOCKS5 Engine 1.0.1.`
 
 const help = `
-# Vee Security OÜ. VeeProxyEngine, VPE.
+# Vee Security OÜ. SOCKS5 Engine.
 #
 # A highly-customizable lightweight SOCKS5-server supporting RADIUS, Redis,
 # subnet whitelisting and blacklisting, session counting.
@@ -14,13 +14,13 @@ const help = `
 #
 # For SOCKS5 protocol specification, consult https://www.ietf.org/rfc/rfc1928.txt.
 # For details on username/password SOCKS5 authentication, consult https://tools.ietf.org/html/rfc1929.
-# This version of VPE supports username/password authentication (METHOD 02) and no authentication (METHOD 01).
+# This version of SOCKS5 Engine supports username/password authentication (METHOD 02) and no authentication (METHOD 01).
 # It supports CONNECT and UDP ASSOCIATE (fragmentation is not implemented) requests.
 #
-# To run VPE, specify the -conf=<full path to this config> flag.
-# /etc/VeeProxyEngine.conf is assumed to be the default config location.
+# To run SOCKS5 Engine, specify the -conf=<full path to this config> flag.
+# /etc/vee-socks5/config.conf is assumed to be the default config location.
 #
-# VPE listens for SIGUSR1 signals and displays data about idle workers and the connection queue on SIGUSR1.
+# SOCKS5 Engine listens for SIGUSR1 signals and displays data about idle workers and the connection queue on SIGUSR1.
 #
 # Use the -h flag to see this configuration file.
 # Use the -v flag to see the version of your build.
@@ -44,7 +44,7 @@ reqHandlers = 100
 # connectionQueue: capacity of the queue that is used to queue requests when no workers are idle.
 connectionQueue = 500
 
-# localIP: IPv4 address of the node. It is needed for the UDP ASSOCIATE command. If not provided, VPE tries to detect it automatically.
+# localIP: IPv4 address of the node. It is needed for the UDP ASSOCIATE command. If not provided, SOCKS5 Engine tries to detect it automatically.
 # If RADIUS is used for authentication, the localIP value will be used as NAS-IP-Address.
 localIP = ""
 
@@ -97,15 +97,15 @@ subnetBlacklist = [
 #
 
 # auth: authentication mode. Can be "RADIUS", "explicit", or "none".
-# If set to "RADIUS", VPE will use data from the respecting section below to contact a RADIUS server.
-# If set to "explicit", VPE will be using data from the AuthFile for authentication.
+# If set to "RADIUS", SOCKS5 Engine will use data from the respecting section below to contact a RADIUS server.
+# If set to "explicit", SOCKS5 Engine will be using data from the AuthFile for authentication.
 auth = "explicit"
 
-# noauth: If set to true, VPE will support the "no authentication" SOCKS5 method in addition to the username/password authentication.
+# noauth: If set to true, SOCKS5 Engine will support the "no authentication" SOCKS5 method in addition to the username/password authentication.
 noauth = true
 
-# authFile: full path to the file with authentication credentials. Consult VeeProxyEngine.auth for syntax.
-authFile = "/etc/VeeProxyEngine.auth"
+# authFile: full path to the file with authentication credentials. Consult users.auth for syntax.
+authFile = "/etc/vee-socks5/users.auth"
 
 #
 # RADIUS

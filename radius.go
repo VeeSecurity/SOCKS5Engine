@@ -28,7 +28,7 @@ func newAuthRadiusPacket() (packet *radius.Packet) {
 	if err != nil {
 		log.Panic(errors.New("can't use LocalIPv4IP for RADIUS"))
 	}
-	radID, err := radius.NewString("VeeConnectoProxy")
+	radID, err := radius.NewString("SOCKS5Engine")
 	if err != nil {
 		log.Panic(err)
 	}
