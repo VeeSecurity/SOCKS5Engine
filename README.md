@@ -12,7 +12,7 @@ It supports CONNECT and UDP ASSOCIATE (fragmentation is not implemented) request
 
 To run SOCKS5 Engine, specify the `-conf=<full path to the config>` flag. `/etc/vee-socks5/config.conf` is assumed to be the default config location.
 
-VPE listens for `SIGUSR1` signals and displays data about idle workers and the connection queue on `SIGUSR1`.
+SOCKS5 Engine listens for `SIGUSR1` signals and displays data about idle workers and the connection queue on `SIGUSR1`.
 
 Use the `-h` flag to see the configuration details.  
 Use the `-v` flag to see the version of your build.
